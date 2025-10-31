@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Email Builder</title>
+    <!-- Load Tailwind CSS for the surrounding UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to separated CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-4 lg:p-8 font-sans">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">Metro by T-Mobile Email Builder</h1>
+            <p class="text-lg text-gray-600">Create your internal communication emails with Cell Nation branding.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- EDITOR PANEL -->
+            <div id="editor" class="bg-white p-6 rounded-xl shadow-2xl">
+                <h2 class="text-2xl font-extrabold mb-6 border-b pb-3 text-purple-700">Email Editor Controls</h2>
+                <div class="space-y-6">
+                    <div>
+                        <label for="header-logo-input" class="block text-sm font-bold text-gray-700 mb-1">Cell Nation Logo URL (Header)</label>
+                        <input type="url" id="header-logo-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="https://s12.gifyu.com/images/b397K.png">
+                    </div>
+                    <div>
+                        <label for="title-input" class="block text-sm font-bold text-gray-700 mb-1">Email Title (Header Banner)</label>
+                        <input type="text" id="title-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="Important Update">
+                    </div>
+                    <div>
+                        <label for="headline-input" class="block text-sm font-bold text-gray-700 mb-1">Main Headline</label>
+                        <input type="text" id="headline-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="📢 10.9.25 Price Card Update – ACTION REQUIRED">
+                    </div>
+                    <div>
+                        <label for="body-input" class="block text-sm font-bold text-gray-700 mb-1">Body Content (Tips: **bold**, *italics*, newlines for paragraphs, `---` for separator, `[METRIC_ATTACH_CARD]` for metric card)</label>
+                        <textarea id="body-input" rows="8" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500">Team,
+
+The Q4 Price Cards are now available. **All managers must review and implement them by EOD 10/10.** Failure to comply will result in a compliance violation.
+
+---
+
+[METRIC_ATTACH_CARD]
+
+*Please prioritize this task.* We appreciate your quick action.</textarea>
+                    </div>
+                    <div>
+                        <label for="cta-text-input" class="block text-sm font-bold text-gray-700 mb-1">Button Text</label>
+                        <input type="text" id="cta-text-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="Access Price Card Validation">
+                    </div>
+                    <div>
+                        <label for="cta-link-input" class="block text-sm font-bold text-gray-700 mb-1">Button Link (URL)</label>
+                        <input type="url" id="cta-link-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="#">
+                    </div>
+                    <div>
+                        <label for="cta-description-input" class="block text-sm font-bold text-gray-700 mb-1">Text Above Button (Highlight Box)</label>
+                        <input type="text" id="cta-description-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="Refer to the 10/9 Price Card Validation for full details and compliance checks.">
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-extrabold mt-10 mb-4 border-b pb-2 text-purple-700">Metric Update Card Editor</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label for="metric-title-input" class="block text-sm font-bold text-gray-700 mb-1">Metric Card Title</label>
+                        <input type="text" id="metric-title-input" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500" value="Metric Update: Total Voice Protection Attach">
+                    </div>
+                    <div>
+                        <label for="metric-description-input" class="block text-sm font-bold text-gray-700 mb-1">Metric Description (Main Content, use **bold** or '|' for list, and `[CODE]...[/CODE]` for formula styling)</label>
+                        <textarea id="metric-description-input" rows="7" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500">Starting **November**, we've updated how we calculate Total Voice Protection Attach. This metric now includes Advanced and Complete protection features, along with legacy protection bundles, but is only measured on **new device transactions**.
+
+[CODE]
+Eligible Protection Features ÷ (Phone Acts + Phone Upgrades)
+[/CODE]
+
+Eligible SOCs include:
+Legacy SOCs: NWPMPHM1 through NWPMPHM10|New SOCs: MAP12, MAP6, PRMAP6, PRMAP12, MCP10, MCP16, PRMCP10, PRMCP16</textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-extrabold mt-10 mb-4 border-b pb-2 text-purple-700">Footer Editor</h3>
+                <div class="space-y-6">
+                    <div>
+                        <label for="footer-logo-input" class="block text-sm font-bold text-gray-700 mb-1">Footer Logo URL</label>
+                        <input type="url" id="footer-logo-input" class="w-full p-2 border border-gray-300 rounded-lg" value="https://s12.gifyu.com/images/b397K.png">
+                    </div>
+                    <div>
+                        <label for="footer-name-input" class="block text-sm font-bold text-gray-700 mb-1">Footer Name</label>
+                        <input type="text" id="footer-name-input" class="w-full p-2 border border-gray-300 rounded-lg" value="Ishwor Tuladhar">
+                    </div>
+                    <div>
+                        <label for="footer-title-input" class="block text-sm font-bold text-gray-700 mb-1">Footer Title</label>
+                        <input type="text" id="footer-title-input" class="w-full p-2 border border-gray-300 rounded-lg" value="Regional Manager">
+                    </div>
+                    <div>
+                        <label for="footer-market-input" class="block text-sm font-bold text-gray-700 mb-1">Footer Market/Area</label>
+                        <input type="text" id="footer-market-input" class="w-full p-2 border border-gray-300 rounded-lg" value="Mid-Atlantic Market">
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREVIEW PANEL -->
+            <div id="preview" class="bg-gray-200 p-2 rounded-xl shadow-2xl">
+                <h2 class="text-2xl font-extrabold mb-4 border-b pb-3 text-gray-700 bg-white p-4 rounded-t-xl">Live Preview (720px Max Width)</h2>
+                <div class="email-body">
+                    <!-- Outer container table to center the email -->
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f9f9f9;">
+                        <tr>
+                            <td align="center" style="padding: 20px 0;">
+                                <!-- Email container table (720px max width) -->
+                                <table role="presentation" class="email-container" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td class="email-header">
+                                            <img id="preview-header-logo" src="" alt="Cell Nation Logo" width="150" style="display: block; margin: 0 auto 10px auto;">
+                                            <h1 id="preview-title" style="font-size: 28px; margin: 0; color: #7a44f8; font-weight: bold;"></h1>
+                                            <div style="width: 70%; margin: 20px auto 0 auto; border-bottom: 1px solid #e0e0e0; box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.1);"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="email-content">
+                                            <h1 id="preview-headline" style="font-family: 'Inter', Arial, sans-serif; font-size: 24px; color: #333333; margin-top: 0; margin-bottom: 20px; font-weight: bold;"></h1>
+                                            <div id="preview-body" style="font-family: 'Inter', Arial, sans-serif; font-size: 16px;"></div>
+                                            <!-- The Metric Update Section HTML will now be injected here by JavaScript using the placeholder -->
+
+                                            <div class="email-highlight">
+                                                <p id="preview-cta-description" style="margin-bottom: 15px; font-weight: bold; font-size: 14px;"></p>
+                                                <a href="#" id="preview-cta"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="email-footer">
+                                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tr>
+                                                    <td>
+                                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                            <tr>
+                                                                <td width="90" style="padding-right: 20px; vertical-align: top;">
+                                                                    <img id="preview-footer-logo" src="" alt="Cell Nation" width="90" style="display: block;">
+                                                                </td>
+                                                                <td style="vertical-align: top; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; text-align: left;">
+                                                                    <p id="preview-footer-name" style="margin: 0 0 1px 0; font-weight: bold; color: #2D3748; font-size: 16px;"></p>
+                                                                    <p id="preview-footer-title" style="margin: 0 0 1px 0; color: #4A5568;"></p>
+                                                                    <p id="preview-footer-market" style="margin: 0; color: #4A5568;"></p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p style="margin-top: 20px; font-size: 11px; font-weight: bold; color: #718096;">Cell Nation Internal Communication</p>
+                                            <p style="margin-top: 0.0px; font-size: 11px;font-style: oblique; color: #718096;">Confidential – For internal use only. Do not share or forward externally </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to separated JavaScript file -->
+    <script src="builder.js"></script>
+</body>
+</html>
