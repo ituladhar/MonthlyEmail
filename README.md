@@ -1,1 +1,2 @@
-**Quick Link to the Live Demo:** [Metro Email Builder Live Demo]([https://builder.metroui.org.ua/](https://ituladhar.github.io/MonthlyEmail/))
+**Quick Link to the Live Demo:** [Metro Email Builder Live Demo](https://ituladhar.github.io/MonthlyEmail/)
+[![Launch Builder](https://img.shields.io/badge/Launch%20Builder-blue?style=for-the-badge)](https://ituladhar.github.io/MonthlyEmail/)
